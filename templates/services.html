@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../multimedia/img/icono.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="../style/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body onload="actualizarCarrito()">
+    <nav class="navbar navbar-expand-lg navbar-dark encabezado">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../multimedia/img/icono.png" width="60">
+                EMPRENDE U
+            </a>
+            <input
+            class="form-control buscador"
+            type="search"
+            id="buscador"
+            placeholder="Buscar productos..."
+            onkeyup="buscarProductos()">
+        </div>
+    </nav>
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../multimedia/img/carrusel1.png" class="d-block w-100" alt="Carrusel 1">
+            </div>
+            <div class="carousel-item">
+                <img src="../multimedia/img/carrusel2.png" class="d-block w-100" alt="Carrusel 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../multimedia/img/carrusel3.png" class="d-block w-100" alt="Carrusel 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <section class="categorias">
+        <h2 class="text-center">
+            Categorías
+        </h2>
+        <div class="row justify-content-center text-center mt-4">
+            <div class="col-md-3">
+                <button
+                    class="btn btn-success w-100"
+                    onclick="filtrarCategoria('Joyas')">
+                    Joyas
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button
+                    class="btn btn-success w-100"
+                    onclick="filtrarCategoria('Accesorios')">
+                    Accesorios
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button
+                    class="btn btn-success w-100"
+                    onclick="filtrarCategoria('Comida')">
+                    Comida
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button
+                    class="btn btn-dark w-100"
+                    onclick="mostrarTodos()">
+                    Todos
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <h2 class="text-center">
+            Productos Destacados
+        </h2>
+        <div class="row" id="productos">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="../multimedia/img/Anillo1.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>
+                            Anillo corazón y estrella
+                        </h5>
+                        <p>
+                            $15.000
+                        </p>
+                        <button
+                            class="btn btn-success"
+                            onclick="agregarProducto('Anillo corazón y estrella',15000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="../multimedia/img/chorizo.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>
+                            Arepa con chorizo
+                        </h5>
+                        <p>
+                            $8.000
+                        </p>
+                        <button
+                            class="btn btn-success"
+                            onclick="agregarProducto('Arepa con chorizo',8000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="../multimedia/img/collar1.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>
+                            Collar en rodio
+                        </h5>
+                        <p>
+                            $20.000
+                        </p>
+                        <button
+                            class="btn btn-success"
+                            onclick="agregarProducto('Collar en rodio',20000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="../multimedia/img/snoppy1.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>
+                            Pin de Snoopy
+                        </h5>
+                        <p>
+                            $6.000
+                        </p>
+                        <button
+                            class="btn btn-success"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mt-5">
+        <h2 class="text-center">
+            Carrito de Compras
+        </h2>
+        <div id="carrito">
+            <p class="text-center">
+                El carrito está vacío.
+            </p>
+        </div>
+        <div class="text-center mt-3">
+            <button class="btn btn-danger" onclick="vaciarCarrito()">
+                Vaciar carrito
+            </button>
+        </div>
+    </section>
+    <section class="whatsapp">
+        <h2>
+            Emprendedores UNITRÓPICO
+        </h2>
+        <p>
+            EMPRENDE U busca apoyar los emprendimientos estudiantiles.
+        </p>
+        <h2>
+            Contáctanos
+        </h2>
+        <a href="https://wa.me/573203706136" class="btn btn-success btn-lg">
+            WhatsApp
+        </a>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>
+                        EMPRENDE U
+                    </h4>
+                    <p>
+                        Apoyando emprendimientos estudiantiles.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4>
+                        Integrantes
+                    </h4>
+                    <p>Laura Isabella Camacho Forero</p>
+                    <p>Jheffrey Alexander Cruz Estepa</p>
+                    <p>Carlos Daniel Cardozo Escala</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>
+                        Correo
+                    </h4>
+                    <p>
+                        <a href="mailto:lauracamacho.es@unitropico.edu.co">lauracamacho.es@unitropico.edu.co</a>
+                    </p>
+                    <p>
+                        <a href="mailto:jheffreycruz.es@unitropico.edu.co">jheffreycruz.es@unitropico.edu.co</a>
+                    </p>
+                    <p>
+                        <a href="mailto:carloscardozo.es@unitropico.edu.co">carloscardozo.es@unitropico.edu.co</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../functions/index.js"></script>
+    <script type="module" src="../functions/tienda.js"></script>
+</body>
+</html>

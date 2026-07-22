@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: times new roman, times, serif;
+    background: white;
+    
+}
+
+header {
+    background: #3f7f69;
+    font-family: times new roman, times, serif;
+    color: white;
+    padding: 25px;
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 30%;
+}
+
+nav {
+    background: #eeeeee;
+    padding: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+nav a:hover {
+    color: #3f7f69;
+}
+
+section {
+    padding: 40px;
+}
+
+footer {
+    background: #3f7f69;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    font-family: times new roman, times, serif;
+
+}
+
+
+#contacto a{
+    text-decoration: none;
+    color: #25D366;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#contacto a:hover{
+    color: #1fa855;
+}
+
+#contacto i{
+    font-size: 35px;
+    margin-right: 8px;
+}
+
+.encabezado {
+    background: #3f7f69;
+}
+
+.buscador {
+    width: 350px;
+}
+
+.carrusel-img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.card {
+    box-shadow: 0 0 10px gray;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.footer {
+    font-family:'Times New Roman', Times, serif;
+    background: #3f7f69;
+    color: white;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.whatsapp {
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.container {
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.categorias {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
