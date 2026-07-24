@@ -43,45 +43,39 @@
         </button>
     </div>
     <section class="categorias">
-        <h2 class="text-center">
-            Categorías
-        </h2>
-        <div class="row justify-content-center text-center mt-4">
-            <div class="col-md-3">
-                <button
-                    class="btn btn-success w-100"
-                    onclick="filtrarCategoria('Joyas')">
-                    Joyas
-                </button>
-            </div>
-            <div class="col-md-3">
-                <button
-                    class="btn btn-success w-100"
-                    onclick="filtrarCategoria('Accesorios')">
-                    Accesorios
-                </button>
-            </div>
-            <div class="col-md-3">
-                <button
-                    class="btn btn-success w-100"
-                    onclick="filtrarCategoria('Comida')">
-                    Comida
-                </button>
-            </div>
-            <div class="col-md-3">
-                <button
-                    class="btn btn-dark w-100"
-                    onclick="mostrarTodos()">
-                    Todos
-                </button>
-            </div>
+
+    <h2 class="text-center">
+        Categorías
+    </h2>
+
+    <div class="row justify-content-center text-center mt-4">
+
+        <div class="col-md-3">
+            <a href="#joyas" class="btn btn-success w-100">
+                Joyas
+            </a>
         </div>
-    </section>
+
+        <div class="col-md-3">
+            <a href="#accesorios" class="btn btn-success w-100">
+                Accesorios
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <a href="#todos" class="btn btn-dark w-100">
+                Todos
+            </a>
+        </div>
+
+    </div>
+
+</section>
     <section class="container">
         <h2 class="text-center">
             Productos Destacados
         </h2>
-        <div class="row" id="productos">
+        <div class="row justify-content-center" id="productos">
             <div class="col-md-3">
                 <div class="card">
                     <img src="../multimedia/img/Anillo1.png" class="card-img-top">
@@ -102,31 +96,13 @@
             </div>
             <div class="col-md-3">
                 <div class="card">
-                    <img src="../multimedia/img/chorizo.jpg" class="card-img-top">
+                    <img src="../multimedia/img/snoppy1.png" class="card-img-top">
                     <div class="card-body">
                         <h5>
-                            Arepa con chorizo
+                            Pin de Snoopy
                         </h5>
                         <p>
-                            $8.000
-                        </p>
-                        <button
-                            class="btn btn-success"
-                            onclick="agregarProducto('Arepa con chorizo',8000)">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="../multimedia/img/collar1.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5>
-                            Collar en rodio
-                        </h5>
-                        <p>
-                            $20.000
+                            $6.000
                         </p>
                         <button
                             class="btn btn-success"
@@ -138,13 +114,13 @@
             </div>
             <div class="col-md-3">
                 <div class="card">
-                    <img src="../multimedia/img/snoppy1.png" class="card-img-top">
+                    <img src="../multimedia/img/collar1.png" class="card-img-top">
                     <div class="card-body">
                         <h5>
-                            Pin de Snoopy
+                           Collar margarita en rodio
                         </h5>
                         <p>
-                            $6.000
+                            $20.000
                         </p>
                         <button
                             class="btn btn-success"
@@ -155,6 +131,724 @@
                 </div>
             </div>
         </div>
+    </section>
+        <section id="joyas" class="container mt-5">
+
+        <h2 class="text-center mb-4">
+            Joyas
+        </h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/brazalete1.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Brazalete de flor azul</h5>
+                        <p>
+                           Brazalete elegante ideal para cualquier ocasión.
+                        </p>
+                        <h4>$20.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Brazalete de flor azul.',20000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/brazalete2.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Brazalete de soles</h5>
+                        <p>
+                            .....
+                        </p>
+                        <h4>$18.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',18000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/brazalete3.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Brazalete flor dorada</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$18.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',18000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/brazalete4.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Brazalete caracol</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$14.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',14000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/brazalete6.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Brazalete sol y luna</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$18.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',18000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/brazalete7.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Brazalete estrellas de mar</h5>
+                        <p>
+                            .....
+                        </p>
+                        <h4>$15.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',15000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/brazalete8.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Brazalete flor, pétalos y piedritas</h5>
+                        <p>
+                            .....
+                        </p>
+                        <h4>$18.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',18000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/brazalete9.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Brazalete flor rosa</h5>
+                        <p>
+                            .....
+                        </p>
+                        <h4>$20.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',20000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/arete1.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Aretes gota dorada</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$14.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',14000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/arete2.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Aretes flor lisa mini dorada</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$16.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',16000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/arete3.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Aretes flor mini en rodio</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$15.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',15000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/arete4.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Aretes corazón beige</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$15.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',15000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/arete5.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Aretes moño</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$25.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',25000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/arete6.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Aretes flor blanca</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$16.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',16000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/arete7.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Aretes rama con perlita</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$14.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',14000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/arete8.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Aretes margarita mini</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$14.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',14000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/earcuff.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Earcuff en rodio</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$14.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',14000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/collar1.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Collar margarita </h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$20.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',20000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/collar2.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Collar estrella dorada/plateada</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$15.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',15000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/collar3.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Collar estrella doble</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$40.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',40000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/collar4.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Collar flor blanca con brillo</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$20.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',20000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/collar5.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Collar estrella de mar</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$20.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',20000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/collar6.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Collar mini corazones fucsia/rosa</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$30.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',30000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/Anillo1.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Anillo corazón y estrella</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$15.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',15000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/anillo2.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Anillo corona grande</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$15.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',15000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/anillo3.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Anillo ramas caídas</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$16.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',16000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/anillo4.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Anillo sol grande</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$18.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',18000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/anillo5.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Anillo estrella sencilla</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$16.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',16000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/anillo6.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Anillo estrellas de mar</h5>
+                        <p>
+                            ....
+                        </p>
+                        <h4>$14.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Collar en rodio',14000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+        <section id="accesorios" class="container mt-5">
+
+        <h2 class="text-center mb-4">
+            Accesorios
+        </h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin2.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de pato con corona</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$5.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin3.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de ranita con hongo</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$5.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin4.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de fantasmita</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$5.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin5.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de piñata</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$5.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/snoppy1.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de Snoopy</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$6.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin6.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de nutria</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$6.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin7.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de pusheen</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$6.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin8.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de pusheen</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$6.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin9.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de Snoopy astronauta</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$6.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin10.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de pato fachero</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$6.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',6000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin11.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de alto nivel de locura</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$8.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',8000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin12.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin CAT SCAN</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$8.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',8000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin14.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de Chopper</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$8.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',8000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div><div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../multimedia/img/pin13.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pin de veterinaria</h5>
+                        <p>
+                            Pin decorativo para mochilas, bolsos o chaquetas.
+                        </p>
+                        <h4>$10.000</h4>
+                        <button class="btn btn-success w-100"
+                            onclick="agregarProducto('Pin de Snoopy',10000)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
     </section>
     <section class="container mt-5">
         <h2 class="text-center">

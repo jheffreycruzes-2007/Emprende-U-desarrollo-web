@@ -122,3 +122,35 @@ footer {
     height: 500px;
     object-fit: contain;
 }
+.categorias .btn{
+    font-size:18px;
+    padding:12px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.categorias .btn:hover{
+    transform:scale(1.05);
+    transition:.3s;
+}
+#joyas,
+#accesorios{
+    padding-top:40px;
+}
+
+#joyas h2,
+#accesorios h2{
+    color:#3f7f69;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+#joyas .card,
+#accesorios .card{
+    transition:0.3s;
+}
+
+#joyas .card:hover,
+#accesorios .card:hover{
+    transform:scale(1.03);
+}

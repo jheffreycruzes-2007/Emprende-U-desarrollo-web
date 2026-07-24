@@ -23,6 +23,18 @@ function mostrarProductos(lista) {
     const contenedor = document.getElementById("productos");
     if (!contenedor) return;
     contenedor.innerHTML = "";
+
+    if (lista.length === 0) {
+        contenedor.innerHTML = `
+            <div class="col-12">
+                <p class="text-center">
+                    No se encontraron productos.
+                </p>
+            </div>
+        `;
+        return;
+    }
+
     lista.forEach((datos) => {
         const imagen = datos.imagen
             ? datos.imagen
