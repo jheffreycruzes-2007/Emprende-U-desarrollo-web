@@ -1,7 +1,8 @@
 import { db, auth } from "./firebase.js";
 
 import {
-    onAuthStateChanged
+    onAuthStateChanged,
+    signOut
 } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
 import {
@@ -318,3 +319,29 @@ if (botonGuardar) {
 }
 
 cargarProductos();
+
+const btnCerrarSesion = document.getElementById("btnCerrarSesion");
+
+if (btnCerrarSesion) {
+
+    btnCerrarSesion.addEventListener("click", async () => {
+
+        try {
+
+            await signOut(auth);
+
+            alert("Sesión cerrada correctamente.");
+
+            window.location.href = "login.html";
+
+        } catch (error) {
+
+            console.error(error);
+
+            alert("Error al cerrar sesión.");
+
+        }
+
+    });
+
+}
