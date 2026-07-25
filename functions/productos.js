@@ -1,4 +1,5 @@
 import { db } from "./firebase.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
 import {
     collection,
@@ -8,11 +9,13 @@ import {
     orderBy,
     deleteDoc,
     doc,
-    updateDoc
+    updateDoc,
+    where
 } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
 let idEditando = null;
 let imagenActual = "";
+const auth = getAuth();
 
 function convertirImagenABase64(archivo, maxWidth = 800, calidad = 0.7) {
 
@@ -87,6 +90,9 @@ async function guardarProducto() {
         }
 
         const datos = {
+
+            uid: auth.currentUser.uid,
+            email: auth.currentUser.email,
 
             nombre: nombre,
             precio: Number(precio),
@@ -184,6 +190,7 @@ function cargarProductos() {
 
     const consulta = query(
         collection(db, "productos"),
+        where("uid", "==", auth.currentUser.uid),
         orderBy("fecha", "desc")
     );
 
