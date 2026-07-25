@@ -1,5 +1,8 @@
-import { db } from "./firebase.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+import { db, auth } from "./firebase.js";
+
+import {
+    onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
 import {
     collection,
@@ -9,13 +12,11 @@ import {
     orderBy,
     deleteDoc,
     doc,
-    updateDoc,
-    where
+    updateDoc
 } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
 let idEditando = null;
 let imagenActual = "";
-const auth = getAuth();
 
 function convertirImagenABase64(archivo, maxWidth = 800, calidad = 0.7) {
 
@@ -92,7 +93,7 @@ async function guardarProducto() {
         const datos = {
 
             uid: auth.currentUser.uid,
-            email: auth.currentUser.email,
+            correoVendedor: auth.currentUser.email,
 
             nombre: nombre,
             precio: Number(precio),
@@ -163,6 +164,10 @@ async function eliminarProducto(id) {
 }
 
 function editarProducto(id, producto) {
+    if (producto.uid !== auth.currentUser.uid) {
+    alert("No puedes editar este producto.");
+    return;
+}
 
     idEditando = id;
     imagenActual = producto.imagen;
@@ -190,13 +195,21 @@ function cargarProductos() {
 
     const consulta = query(
         collection(db, "productos"),
-        where("uid", "==", auth.currentUser.uid),
         orderBy("fecha", "desc")
     );
 
     onSnapshot(consulta, (snapshot) => {
 
         lista.innerHTML = "";
+
+        if (!auth.currentUser) {
+            lista.innerHTML = `
+                <p class="text-center">
+                    Inicie sesión nuevamente.
+                </p>
+            `;
+            return;
+        }
 
         if (snapshot.empty) {
 
@@ -207,15 +220,17 @@ function cargarProductos() {
             `;
 
             return;
-
         }
 
         snapshot.forEach((documento) => {
 
             const producto = documento.data();
 
-            const card = document.createElement("div");
+            if (producto.uid !== auth.currentUser.uid) {
+                return;
+            }
 
+            const card = document.createElement("div");
             card.className = "card mb-3 shadow-sm";
 
             card.innerHTML = `
@@ -279,15 +294,11 @@ function cargarProductos() {
             `;
 
             card.querySelector(".editar").addEventListener("click", () => {
-
                 editarProducto(documento.id, producto);
-
             });
 
             card.querySelector(".eliminar").addEventListener("click", () => {
-
-                eliminarProducto(documento.id);
-
+                eliminarProducto(documento.id, producto);
             });
 
             lista.appendChild(card);
