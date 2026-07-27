@@ -94,7 +94,7 @@ async function guardarProducto() {
         const datos = {
 
             uid: auth.currentUser.uid,
-            correoVendedor: auth.currentUser.email,
+            correo: auth.currentUser.email,
 
             nombre: nombre,
             precio: Number(precio),
