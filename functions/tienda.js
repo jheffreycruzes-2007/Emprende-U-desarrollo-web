@@ -6,28 +6,21 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
 const db = getFirestore(app);
-
 let productos = [];
-
 async function cargarProductos() {
-
     const consulta = await getDocs(collection(db, "productos"));
 
     productos = [];
-
     consulta.forEach((producto) => {
         productos.push(producto.data());
     });
-
     mostrarProductos(productos);
 }
 
 function crearTarjeta(datos) {
-
     const imagen = datos.imagen
         ? datos.imagen
         : "../multimedia/img/icono.png";
-
     return `
         <div class="col-md-3 mb-4">
 
@@ -107,14 +100,12 @@ function mostrarProductos(lista) {
         const tarjeta = crearTarjeta(datos);
 
         if (datos.categoria === "Joyas") {
-
             joyas.innerHTML += tarjeta;
 
         }
+
         else if (datos.categoria === "Accesorios") {
-
             accesorios.innerHTML += tarjeta;
-
         }
 
     });
@@ -122,32 +113,25 @@ function mostrarProductos(lista) {
 }
 
 window.buscarProductos = function () {
-
     const texto = document
         .getElementById("buscador")
         .value
         .toLowerCase();
-
     const filtrados = productos.filter((producto) =>
         producto.nombre.toLowerCase().includes(texto)
     );
-
     mostrarProductos(filtrados);
 };
 
 window.filtrarCategoria = function (categoria) {
-
     const filtrados = productos.filter((producto) =>
         producto.categoria === categoria
     );
-
     mostrarProductos(filtrados);
 };
 
 window.mostrarTodos = function () {
-
     mostrarProductos(productos);
-
 };
 
 cargarProductos();

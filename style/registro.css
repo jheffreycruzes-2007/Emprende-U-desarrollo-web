@@ -6,12 +6,12 @@ body{
 }
 
 .navbar{
-    background:#3f7f69 !important;
+    background:#3f7f69;
     padding:15px 40px;
 }
 
 .navbar-brand{
-    color:white !important;
+    color:white;
     font-size:22px;
     font-weight:bold;
 }
