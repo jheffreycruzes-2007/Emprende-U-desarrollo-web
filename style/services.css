@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+body {
+    margin: 0;
+    background: white;
+    
+}
+
+header {
+    background: #3f7f69;
+    color: white;
+    padding: 25px;
+}
+
+header img {
+    font-family: 'Poppins', sans-serif;
+    width: 200px;
+    height: 200px;
+    border-radius: 30%;
+}
+
+nav {
+    font-family: 'Poppins', sans-serif;
+    background: #eeeeee;
+    padding: 15px;
+}
+
+nav a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+nav a:hover {
+    color: #3f7f69;
+}
+
+section {
+    font-family: 'Poppins', sans-serif;
+    padding: 40px;
+}
+
+footer {
+    font-family: 'Poppins', sans-serif;
+    background: #3f7f69;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+
+}
+
+#contacto a{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #25D366;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#contacto a:hover{
+    font-family: 'Poppins', sans-serif;
+    color: #1fa855;
+}
+
+#contacto i{
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    margin-right: 8px;
+}
+
+.encabezado {
+    font-family: 'Poppins', sans-serif;
+    background: #3f7f69;
+}
+
+.buscador {
+    font-family: 'Poppins', sans-serif;
+    width: 350px;
+}
+
+.carrusel-img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.card {
+    box-shadow: 0 0 10px gray;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.footer {
+    font-family: 'Poppins', sans-serif;
+    background: #3f7f69;
+    color: white;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.whatsapp {
+    
+    text-align: center;
+}
+
+.container {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.categorias {
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+.categorias .btn{
+    font-size:18px;
+    padding:12px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.categorias .btn:hover{
+    transform:scale(1.05);
+    transition:.3s;
+}
+#joyas,
+#accesorios{
+    padding-top:40px;
+}
+
+#joyas h2,
+#accesorios h2{
+    color:#3f7f69;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+#joyas .card,
+#accesorios .card{
+    transition:0.3s;
+}
+
+#joyas .card:hover,
+#accesorios .card:hover{
+    transform:scale(1.03);
+}

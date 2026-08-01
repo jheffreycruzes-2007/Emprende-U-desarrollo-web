@@ -1,77 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="multimedia/img/icono.png">
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emprende U</title>
+    <link rel="shortcut icon" href="/" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style/index.css">
+
 </head>
 
 <body>
-    <header>
-        <center>
-            <img src="multimedia/img/logo.jpg" width="200">
-            <h1>EMPRENDE U</h1>
-            <p>
-                Plataforma de emprendimientos de UNITRÓPICO
-            </p>
-        </center>
-    </header>
 
-    <nav>
-        <center>
-            <a href="#inicio">Inicio</a> |
-            <a href="#nosotros">Nosotros</a> |
-            <a href="#contacto">Contacto</a> |
-            <a href="templates/services.html">
-                Servicios
-            </a> |
-            <a href="templates/login.html">Iniciar sesión</a> |
-            <a href="templates/registro.html">Registrarse</a> |
-        </center>
-    </nav>
+<!-- ================= HEADER ================= -->
 
-    <main>
-        <section id="inicio">
-            <center>
-                <h2>Bienvenido</h2>
-                <p>
-                    Conoce los mejores emprendimientos universitarios.
-                </p>
-                <img src="multimedia/img/bienvenidos.jpg" width="700" alt="Bienvenidos">
-            </center>
-        </section>
+<header class="hero">
+    <div class="container hero-contenido">
 
-        <hr>
-        <section id="nosotros">
-            <center>
-                <h2>¿Quiénes Somos?</h2>
-                <p>
-                    EMPRENDE U busca apoyar a los estudiantes emprendedores de UNITRÓPICO.
-                </p>
-            </center>
-        </section>
-        <hr>
-        <section id="contacto">
-            <center>
-                <h2>Contacto</h2>
-                <p>
-                    Comunícate al siguiente numero por WhatsApp.
-                </p>
-                <a href="https://wa.me/573203706136" target="_blank">
-                    <i class="fa-brands fa-square-whatsapp"></i>
-                    3203706136
-                </a>
-            </center>
-        </section>
-    </main>
-    <footer>
-        <center>
-            EMPRENDE U © 2026
-        </center>
-    </footer>
-    <script src="functions/index.js"></script>
+        <img src="multimedia/img/logo.png" class="logo" alt="Logo">
+
+        <h1>EMPRENDE U</h1>
+
+        <p>
+            Plataforma de emprendimientos de UNITRÓPICO
+        </p>
+
+    </div>
+</header>
+
+<!-- ================= MENU ================= -->
+
+<nav class="navbar navbar-expand-lg menu">
+    <div class="container">
+        <button class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center"
+            id="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="bi bi-house-fill"></i>
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="templates/services.html"
+                        class="nav-link">
+                        <i class="bi bi-bag-fill"></i>
+                        Servicios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="templates/login.html"
+                        class="nav-link">
+                        <i class="bi bi-person-fill"></i>
+                        Iniciar sesión
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="templates/registro.html"
+                        class="btn btn-success">
+                        Registrarse
+                    </a>
+                 </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= BIENVENIDO ================= -->
+
+<section class="bienvenido">
+    <div class="container">
+        <h2>Bienvenidos</h2>
+        <div class="linea"></div>
+        <p>
+            Descubre productos y servicios creados por estudiantes emprendedores de UNITRÓPICO.
+            Nuestra plataforma conecta ideas, talento e innovación en un solo lugar para apoyar el crecimiento de los emprendimientos universitarios.
+        </p>
+    </div>
+</section>
+
+<!-- ================= BANNER ================= -->
+
+<section class="banner">
+    <div class="container">
+        <div class="banner-img">
+            <img src="multimedia/img/bienvenidos.jpg" alt="Emprendimientos UNITRÓPICO">
+        </div>
+        <div class="banner-info">
+            <div>
+                <i class="bi bi-shop"></i>
+                <h5>Apoya talento local</h5>
+            </div>
+            <div>
+                <i class="bi bi-lightbulb"></i>
+                <h5>Impulsa ideas</h5>
+            </div>
+            <div>
+                <i class="bi bi-people-fill"></i>
+                <h5>Crea oportunidades</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= INFORMACION ================= -->
+
+<section class="informacion">
+    <div class="container">
+        <h2>
+            ¿Qué encontrarás en Emprende U?
+        </h2>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card-info">
+                    <i class="bi bi-basket-fill"></i>
+                    <h4>Variedad</h4>
+                    <p>
+                        Explora productos únicos elaborados por estudiantes.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card-info">
+                    <i class="bi bi-award-fill"></i>
+                    <h4>Calidad</h4>
+                    <p>
+                        Emprendimientos comprometidos con ofrecer lo mejor.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card-info">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    <h4>Conexión</h4>
+                    <p>
+                        Comunícate fácilmente con los emprendedores.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card-info">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <h4>Crecimiento</h4>
+                    <p>
+                        Apoyamos el desarrollo de ideas innovadoras.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+    <div class="container text-center">
+        <img src="multimedia/img/logo.png"
+            width="100">
+        <h4>
+            Emprende U
+        </h4>
+        <p>
+            Plataforma para impulsar los emprendimientos universitarios de UNITRÓPICO.
+        </p>
+        <p>
+            © 2026 Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

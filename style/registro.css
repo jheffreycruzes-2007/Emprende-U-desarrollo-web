@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 body{
     margin:0;
     font-family:"poppins",sans-serif;
@@ -5,12 +6,12 @@ body{
 }
 
 .navbar{
-    background:#3f7f69;
+    background:#3f7f69 !important;
     padding:15px 40px;
 }
 
 .navbar-brand{
-    color:white;
+    color:white !important;
     font-size:22px;
     font-weight:bold;
 }
@@ -22,75 +23,55 @@ body{
     margin-right:10px;
 }
 
-.container{
-    max-width:900px;
-}
-
-h2{
-    text-align:center;
-    color:#3f7f69;
-    font-size:34px;
-    font-weight:bold;
-    margin-bottom:35px;
-}
-
-h3{
-    text-align:center;
-    color:#3f7f69;
-    margin-bottom:25px;
-}
-
 .card{
+    max-width:700px;
+    margin:60px auto;
     border:none;
     border-radius:12px;
     box-shadow:0 8px 25px rgba(0,0,0,.15);
-    transition:box-shadow .3s ease;
+    transition:all .35s ease;
+    text-align:center;
 }
 
 .card:hover{
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    transform:translateY(-12px) scale(1.01);
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
 }
 
-.card-body{
-    padding:35px;
+.card h2{
+    font-size:34px;
+    margin-bottom:30px;
 }
 
 .form-label{
     display:block;
     text-align:center;
     font-size:18px;
-    font-weight:bold;
     margin-bottom:8px;
 }
 
-.form-control,
-.form-select{
+.form-control{
     text-align:center;
     border-radius:8px;
     padding:12px;
     transition:.3s;
 }
 
-textarea.form-control{
-    resize:none;
-}
-
-.form-control:hover,
-.form-select:hover{
+.form-control:hover{
     border-color:#3f7f69;
 }
 
-.form-control:focus,
-.form-select:focus{
+.form-control:focus{
     border-color:#3f7f69;
     box-shadow:0 0 8px rgba(63,127,105,.35);
 }
 
+
 .btn{
+    transition:.3s;
     border-radius:8px;
     font-size:18px;
     padding:10px;
-    transition:background .3s ease, box-shadow .3s ease;
 }
 
 .btn-success{
@@ -100,21 +81,17 @@ textarea.form-control{
 
 .btn-success:hover{
     background:#1d7345;
-    box-shadow:0 8px 18px rgba(35,139,82,.35);
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(35,139,82,.35);
 }
 
-.btn-danger:hover{
-    box-shadow:0 8px 18px rgba(220,53,69,.35);
-}
-
-#listaProductos{
-    margin-top:20px;
-}
-
-#listaProductos .card{
-    margin-bottom:20px;
+.btn-outline-success:hover{
+    transform:translateY(-3px);
+    background:#238b52;
+    color:white;
+    box-shadow:0 10px 20px rgba(35,139,82,.35);
 }
 
 hr{
-    margin:30px 0;
+    margin:25px 0;
 }
